@@ -2476,7 +2476,8 @@ async function fetchPageTitle(url) {
         
         // 🟢 METHOD 1: Use CORS proxies (works for most sites)
         const proxyUrls = [
-            `${window.location.origin}/api/fetch?url=${encodeURIComponent(cleanUrl)}`
+            `https://api.allorigins.win/raw?url=${encodeURIComponent(cleanUrl)}`,
+            `https://corsproxy.io/?${encodeURIComponent(cleanUrl)}`
         ];
         
         let html = null;
